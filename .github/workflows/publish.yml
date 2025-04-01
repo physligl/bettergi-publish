@@ -55,7 +55,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: babalae/better-genshin-impact
+          repository: physligl/better-genshin-impact
+          ref: js-map
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.x
@@ -97,7 +98,7 @@ jobs:
       # 下载构建 repo 的内容补充数据
       - uses: actions/checkout@v4
         with:
-          repository: babalae/bettergi-publish
+          repository: physligl/bettergi-publish
           path: publish
       - name: 🗜️ Extract Map
         run: |
